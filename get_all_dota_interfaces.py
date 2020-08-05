@@ -3,14 +3,13 @@ import json
 # This should be a one time run script
 # author: Stephen Miller
 
-#define constants
+#define constants, TODO move these to separate file
 inputFileName = "all_steam_interfaces.json"
 outputFileName = "all_dota2_interfaces.json"
 
 with open(inputFileName, 'r+') as inputFile:
 	data = json.load(inputFile)
 
-print("data obj: "+str(type(data)))
 apilist = data.get("apilist")
 interfaces = apilist.get("interfaces")
 
@@ -20,9 +19,5 @@ for interface in interfaces:
 		print(interface.get("name"))
 		dota2Interfaces.append(interface)
 
-#convert to JSON
-jsonOut = json.dumps(dota2Interfaces)
-print(jsonOut)
-
-#with open(outputFileName, 'w+') as outputFile:		#
-	#json.dump(jsonOut, outputFile, indent=4)
+with open(outputFileName, 'w+') as outputFile:
+	json.dump(dota2Interfaces, outputFile, indent=4)
