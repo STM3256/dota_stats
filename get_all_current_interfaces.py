@@ -8,8 +8,9 @@ class Dota2Error(Exception):
 class Dota2HttpError(Dota2Error):
     pass
 
-print("Welcome to the item analysis program\n")
-print("Lets see the current items!")
+outputFileName = "all_steam_interfaces.json"
+print("Welcome to the API Interface Caller")
+print("This will get all live interfaces from Steam")
 apikey = os.environ.get('dota2apikey')
 
 # See http://wiki.teamfortress.com/wiki/WebAPI for a list of available 
@@ -26,5 +27,7 @@ if response.status_code >= 400:
 		raise Dota2HttpError("The server is busy or you exceeded limits. Please wait 30s and try again.")
 
 	raise Dota2HttpError("Failed to retrieve data: %s. URL: %s" % (response.status_code, url))
-
-print(response.json())
+	
+jsonResponse = response.json()
+with open(outputFileName, 'w+') as outputFile:
+	json.dump(jsonResponse, outputFile, indent=4)
