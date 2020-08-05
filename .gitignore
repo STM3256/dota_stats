@@ -1,6 +1,6 @@
 # Dota output files to ignore
 all_steam_interfaces.json
-
+all_dota2_interfaces.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -9,5 +9,6 @@ This repository requires the useage of the [Requests library](https://github.com
 2. Put that key in your environment variables under: `dota2apikey`
 3. Run whichever analysis file you want
 
-## One-time scripts
-* Use get_all_current_interfaces.py to create an output json file which shows the currently supported Interfaces from Valve in their API
+## One-time scripts (in order)
+1. Use get_all_current_interfaces.py to create an output json file (all_steam_interfaces.json) which shows the currently supported Interfaces from Valve in their API
+2. Use get_all_dota_interfaces.py to create an output json file (all_dota2_interfaces.json) which shows all the currently supported *Dota2* interfaces from Valve in their API
