@@ -16,7 +16,7 @@ interfaces = apilist.get("interfaces")
 
 dota2Interfaces = []
 for interface in interfaces:
-	if "DOTA" in interface.get("name"):
+	if "IDOTA" in interface.get("name"):
 		print(interface.get("name"))
 		dota2Interfaces.append(interface)
 
