@@ -1,6 +1,10 @@
 # Dota output files to ignore
 all_steam_interfaces.json
 all_dota2_interfaces.json
+live_part1.json
+live_part2.json
+temp_matchDetails.json
+temp_matchDetails_true.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
