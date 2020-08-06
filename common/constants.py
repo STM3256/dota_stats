@@ -1,0 +1,3 @@
+#DEFINE CONSTANTS HERE
+
+FILENAME_HEROES = "heroes.json"
