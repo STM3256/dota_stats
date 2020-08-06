@@ -24,3 +24,13 @@ def getHeroes():
 def getAllInterfaces():
 	url = "http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v0001"
 	return get(url, {'key':apikey})
+	
+def getMatchDetails(match_id):
+	url = "http://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/v1"
+	parameters = {'key':apikey, 'match_id': match_id, 'include_persona_names':False}
+	return get(url, parameters)
+	
+	
+	
+	
+	
