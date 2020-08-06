@@ -1,0 +1,6 @@
+pretty print live games
+display only full games (people leave if game is over)
+display heroes name from other output file
+create python on loop that checks every 30 minutes for the live games
+	if a 'followed' player is found, send email
+	followed player ids and email should be read from config file
