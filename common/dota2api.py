@@ -38,5 +38,12 @@ def getTopLiveGames():
 	parameters = {'key':apikey, 'partner':partnerid}
 	return get(url, parameters)
 	
+#steam account information
+def getPlayerSummaries():
+	url = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002"
+	#steamids are different than dota account ids
+	steamids = {77766666663333333}
+	parameters = {'key':apikey, 'steamids':steamids}
+	return get(url, parameters)
 	
 	

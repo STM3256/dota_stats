@@ -20,6 +20,7 @@ players = firstgame.get("players")
 print("Match "+str(match_id)+" has "+str(spectators)+" spectators!")
 for player in players:
 	#TODO change key of heroes from string to int
-	print(str(player.get("account_id"))+" is playing as "+heroes[str(player.get("hero_id"))]) 
+	print(str(player.get("account_id"))+" is playing as "+heroes[str(player.get("hero_id"))])
+#print(dota2api.getPlayerSummaries())
 with open(outputFileName, 'w+') as outputFile:
 	json.dump(jsonResponse, outputFile, indent=4)
