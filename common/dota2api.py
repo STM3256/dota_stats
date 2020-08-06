@@ -20,3 +20,7 @@ def getHeroes():
 	url = "http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v1"
 	parameters = {'key':apikey}
 	return get(url, parameters)
+
+def getAllInterfaces():
+	url = "http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v0001"
+	return get(url, {})
