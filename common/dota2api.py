@@ -25,12 +25,18 @@ def getAllInterfaces():
 	url = "http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v0001"
 	return get(url, {'key':apikey})
 	
+#include_persona_names doesn't seem to do anything
 def getMatchDetails(match_id):
 	url = "http://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/v1"
 	parameters = {'key':apikey, 'match_id': match_id, 'include_persona_names':False}
 	return get(url, parameters)
 	
-	
+#partnerid works if value is [1-3] but no change in response
+def getTopLiveGames():
+	url = "http://api.steampowered.com/IDOTA2Match_570/GetTopLiveGame/v1"
+	partnerid = 1
+	parameters = {'key':apikey, 'partner':partnerid}
+	return get(url, parameters)
 	
 	
 	
