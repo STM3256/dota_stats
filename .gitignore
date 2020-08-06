@@ -5,7 +5,7 @@ live_part1.json
 live_part2.json
 temp_matchDetails.json
 temp_matchDetails_true.json
-dota_heroes.json
+heroes.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
