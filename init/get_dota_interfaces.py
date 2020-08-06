@@ -10,13 +10,14 @@ outputFileName = "all_dota2_interfaces.json"
 with open(inputFileName, 'r+') as inputFile:
 	data = json.load(inputFile)
 
+#get the list of interfaces out of the json
 apilist = data.get("apilist")
 interfaces = apilist.get("interfaces")
 
+#remove non-dota ones
 dota2Interfaces = []
 for interface in interfaces:
 	if "DOTA" in interface.get("name"):
-		#print(interface.get("name"))
 		dota2Interfaces.append(interface)
 
 with open(outputFileName, 'w+') as outputFile:

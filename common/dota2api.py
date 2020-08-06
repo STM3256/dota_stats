@@ -23,4 +23,4 @@ def getHeroes():
 
 def getAllInterfaces():
 	url = "http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v0001"
-	return get(url, {})
+	return get(url, {'key':apikey})
