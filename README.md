@@ -14,3 +14,4 @@ Install using `pip install requests`
 1. Run `init.py`. This will call the other one time scripts to get Valve's current understanding of the game for use with other scripts (heroes, items, etc)
 * Use get_methods.py to create an output json file which shows the currently supported Interfaces from Valve in their API
 * Use get_dota_methods.py to create an output json file which shows all the currently supported *Dota2* interfaces from Valve in their API
+* Use get_heroes.py to get the current heroes and save them in a file
