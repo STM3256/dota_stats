@@ -16,6 +16,13 @@ def get(url, parameters):
 	
 apikey = os.environ.get('dota2apikey')
 
+def convert_steamid_64bit_to_32bit(id64):
+	return str(int(id64[3:]) - 61197960265728)
+
+
+def convert_steamid_32bit_to_64bit(id32):
+	return"765"+str(int(id32 + 61197960265728))
+
 def getHeroes():
 	url = "http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v1"
 	parameters = {'key':apikey}
@@ -39,10 +46,10 @@ def getTopLiveGames():
 	return get(url, parameters)
 	
 #steam account information
-def getPlayerSummaries():
+def getPlayerSummaries(steamid):
 	url = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002"
 	#steamids are different than dota account ids
-	steamids = {77766666663333333}
+	steamids = {steamid}
 	parameters = {'key':apikey, 'steamids':steamids}
 	return get(url, parameters)
 	
