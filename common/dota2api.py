@@ -1,5 +1,6 @@
 import os
 import requests
+import json
 
 class Dota2Error(Exception):
     pass
@@ -53,4 +54,21 @@ def getPlayerSummaries(steamid):
 	parameters = {'key':apikey, 'steamids':steamids}
 	return get(url, parameters)
 	
+	#steam account information
+def getTournamentPlayerStats(input_account_id):
+	url = "http://api.steampowered.com/IDOTA2Match_570/GetTournamentPlayerStats/v1"
+	account_id = {input_account_id}
+	print('puppeys account => 87278757')
+	parameters = {'key':apikey, 'account_id':'87278757', 'hero_id':'66', 'league_id':'65006'}
+	return get(url, parameters)
 	
+def getLeagueListing():
+	url = "http://api.steampowered.com/IDOTA2Match_205790/GetLeagueListing/v1"
+	parameters = {'key':apikey}
+	return get(url, parameters)	
+	
+#outputFileName = "puppey_chen.json"
+#jsonResponse = getTournamentPlayerStats('asdf')
+#with open(outputFileName, 'w+') as outputFile:
+#	json.dump(jsonResponse, outputFile, indent=4)
+

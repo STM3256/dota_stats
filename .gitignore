@@ -7,6 +7,8 @@ temp_matchDetails.json
 temp_matchDetails_true.json
 heroes.json
 live_games.json
+leagues.json
+puppey_chen.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
